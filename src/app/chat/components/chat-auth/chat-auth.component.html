@@ -1,0 +1,7 @@
+<label>Enter your nickname here*</label>
+<input #nicknameInput="ngModel" type="text" minlength="5" maxlength="20" name="nickname" class="primary" (keyup.enter)="authenticate()" [(ngModel)]="nickname" required>
+<div class="validation-errors">
+<span *ngIf="nicknameInput.errors?.minlength && nicknameInput.touched" class="red-text lighten-2"><small>Nickname should be in the range of 5-20 characters</small></span>
+<span *ngIf="nicknameInput.errors?.required && nicknameInput.touched" class="red-text lighten-2"><small>Nickname is required!</small></span>
+</div>
+<button class="btn primary z-depth-3 right" [disabled]="nicknameInput.errors" (click)="authenticate()">Submit</button>

@@ -1,0 +1,15 @@
+
+.username-li{
+	border:none !important;
+	cursor: pointer;
+	color:#fff;
+	font-size: 11px;
+}
+.collection{
+	border:none;
+}
+
+
+.username-li span{
+	font-size:210%;
+}

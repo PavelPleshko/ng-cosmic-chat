@@ -1,0 +1,22 @@
+
+<div class="col s3 main-gradient threads-wrapper">
+	<ul class="collection">
+	<li class="collection-header"><input type="text" name="search-thread" placeholder="search" [(ngModel)]="searchValue"></li>
+	<ng-template class="grey-text" #nothreads>
+		No threads yet.
+	</ng-template>
+	<div *ngIf="(threads | async) as myThreads;else nothreads">
+	<li class="collection-item primary" (click)="setCurrentThread(thread)" *ngFor="let thread of myThreads | itemFilter : 'name' : searchValue">
+		<div class="thread-header row"><small class="thread-name col s7">{{thread.name}}</small>
+		<small class="col s5 thread-updated grey-text right">{{thread.updated | date : 'dd-MM HH:mm'}}</small>
+	</div>
+	<div class="thread-body">
+		<div *ngIf="thread.lastMessage; else nomessages"><span class="message-sender grey-text">From {{thread.lastMessage.user.nickname}}</span><div class="message-text rounded block" [ngClass]="{'unread':!thread.lastMessage.isReadByUser,'primary':thread.lastMessage.isReadByUser || thread.lastMessage.isRead}"> {{thread.lastMessage.text}}</div></div>
+		<ng-template #nomessages>
+			<div class="grey-text"><small>No messages yet</small></div>
+		</ng-template>
+	</div>
+	</li>
+</div>
+</ul>
+</div>

@@ -1,1 +1,84 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+body{
+background: #67106e;
+background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);
+background: linear-gradient(to right, #961884, #56327a);
+color: #fff;
+}
+
+@font-face{
+	font-family: 'punishment';
+	src: url("/assets/fonts/punishment.otf");
+}
+
+.main-gradient{
+background: #642B73;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #C6426E, #642B73);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #C6426E, #642B73); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+.primary{
+	color:#fff;
+	background: #67106e !important;
+}
+
+.collection{
+	border: none;
+}
+
+.collection li{
+	cursor: pointer;
+}
+
+.primary:focus{
+	background: #67106e !important;
+}
+
+.border-primary{
+	border-bottom:2px solid #67106e;
+}
+
+input[type="text"]:focus{
+	border-bottom:2px solid #67106e !important;
+	box-shadow: none !important;
+	outline: none !important;
+}
+
+input[type="text"]{
+	border-bottom:1px solid #67106e !important;
+	box-shadow: none !important;
+	outline: none !important;
+}
+
+input[type="text"].primary:focus{
+	border-bottom:none !important;
+	background: #67106e !important;
+	box-shadow: 1px 2px 5px 1px rgba(255,255,255,.9) !important;
+}
+
+input[type="text"].primary:hover{
+	border-bottom:none !important;
+	background: #67106e !important;
+	box-shadow: 1px 2px 5px 1px rgba(255,255,255,.5) !important;
+}
+
+.primary:hover{
+	background:#af48b8 !important;
+}
+
+.rounded{
+	border-radius:4px;
+}
+
+.unread{
+	background: #9814b3 !important;
+}
+
+.block{
+	width: 100%;
+	padding:3px;
+}
+

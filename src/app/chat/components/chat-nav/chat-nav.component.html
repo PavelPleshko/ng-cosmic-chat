@@ -1,0 +1,10 @@
+<div class="main-gradient mini-panel white-text left z-depth-5">
+<div *ngIf="currentUser" class="user">
+	Welcome, <strong>{{currentUser.nickname}}</strong>
+<br>
+<div  class="" *ngIf="unreadMessagesCount;else nomessages">
+	<span class="new badge primary" data-badge-caption=""><strong>{{unreadMessagesCount}}</strong></span> new {{unreadMessagesCount > 1 ? 'messages' : 'message'}} 
+</div>
+<ng-template  class="" #nomessages>No new messages</ng-template>
+</div>
+</div>

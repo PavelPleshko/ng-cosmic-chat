@@ -1,0 +1,40 @@
+
+.threads-wrapper{
+	height:500px;
+	max-height:500px;
+	overflow: hidden;
+	border-radius: 3px;
+}
+
+.thread-name{
+	font-weight: bold;
+	overflow:hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	display: inline-block;
+}
+
+.thread-updated{
+	font-size: 65%;
+}
+
+.thread-body div{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.message-text{
+	position: relative;
+	text-overflow: ellipsis;
+	max-width: 100%;
+	overflow: hidden;
+}
+
+.message-sender{
+	overflow:hidden;
+	text-overflow: ellipsis;
+	max-width: 100%;
+	width: 100%;
+	white-space: nowrap;
+	font-size: 85%;
+}

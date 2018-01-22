@@ -1,0 +1,32 @@
+<div style="display: none;">
+<audio #incoming
+  [src]="sounds.incoming">
+</audio>
+<audio #outgoing
+  [src]="sounds.outgoing">
+</audio>
+</div>
+
+<div class="z-depth-3 chat-window-main-wrapper main-gradient">
+<div class="chat-window">
+	<div class="chat-window-header border-primary">{{currentThread?.name}}</div>
+	<div class="chat-window-body">
+		<div *ngFor="let message of messages | async">
+			<div *ngIf="message">
+				<div class="message" (mouseover)="readMessage(message)">
+					<div class="message-nickname">{{message.user.nickname | overflowPipe : 20}}</div>
+					<div class="message-text" [class.grey]="!message.isReadByUser">{{message.text}}</div>
+				</div>
+			</div>
+		</div>
+		<div *ngFor="let user of usersTyping | async">
+			<span class="typing grey-text">{{user}} is typing a message...</span>			
+		</div>
+	</div>
+</div>
+
+</div>
+<div class="chat-window-form z-depth-3 main-gradient">
+<app-chat-form (toggleTypingNotification)="onToggleTyping($event)" (sendMessage)="onSendMessage($event)"></app-chat-form>
+</div>
+

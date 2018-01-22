@@ -1,0 +1,18 @@
+.auth-input{
+	border:none !important;
+	border: 2px solid #655e5e !important;
+	border-radius: 3px !important;
+}
+
+.auth-input:focus{
+	border:none !important;
+	outline: none !important;
+	border: 2px solid #4b4444 !important;
+	border-radius: 3px !important;
+}
+
+.validation-errors{
+	position: relative;
+	position: relative;
+	top: -15px;
+}
