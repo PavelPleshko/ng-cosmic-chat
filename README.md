@@ -1,7 +1,7 @@
 
 Chat application built with angular 5,Nodejs,RxJs and Websockets.
 
-Live demo coming soon...
+Live demo https://my-chat-app-osjxkyrncf.now.sh/
 
 Authorization view:
 ![authorization](screen_authorization.png)
